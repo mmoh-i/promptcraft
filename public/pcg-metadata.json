@@ -1,0 +1,18 @@
+{
+  "name": "Prompt Craft Gaming",
+  "symbol": "PCG",
+  "description": "Reward tokens for the Prompt Craft game, earned by achieving high accuracy scores in prompt engineering challenges.",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Prompt_craft_game_of_prompting.png",
+  "external_url": "https://promptcraft.game",
+  "attributes": [
+    {
+      "trait_type": "Category",
+      "value": "Gaming"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Reward Token"
+    }
+  ]
+}
+
