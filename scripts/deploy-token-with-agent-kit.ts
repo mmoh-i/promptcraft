@@ -5,7 +5,7 @@
 
 // // Replace with your actual private key and RPC endpoint
 // const PRIVATE_KEY = process.env.PRIVATE_KEY ? Uint8Array.from(Buffer.from(process.env.PRIVATE_KEY, 'base64')) : new Uint8Array();
-// const RPC_ENDPOINT = "https://api.testnet.sonic.game"; // Change to devnet for testing
+// const RPC_ENDPOINT = "https://api.testnet.sonic.game"; 
 
 // // Convert the private key to a base58 string
 // const privateKeyBase58 = bs58.encode(PRIVATE_KEY)
@@ -31,7 +31,9 @@
 //     const agent = new SolanaAgentKit(
 //       privateKeyBase58,
 //       RPC_ENDPOINT,
-//       null // Assuming no OpenAI API key is needed, or replace with actual key if required
+//       new ChatGroq({
+//         apiKey: process.env.GROQ_API_KEY,
+//       }) 
 //     )
 
 //     console.log("Deploying Prompt Craft token with the following metadata:")
