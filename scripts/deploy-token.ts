@@ -75,6 +75,6 @@ deployToken()
     console.log("Update the TOKEN_MINT_ADDRESS in your token-service.ts with this value")
   })
   .catch((error) => {
-    console.error("Deployment failed:", error)
+    console.error("Deployment failed:",error)
   })
 
