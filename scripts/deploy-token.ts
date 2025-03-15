@@ -6,11 +6,7 @@ import { Connection, Keypair } from "@solana/web3.js"
 import { createMint, getOrCreateAssociatedTokenAccount, mintTo } from "@solana/spl-token"
 
 // Replace with your actual private key and RPC endpoint
-const PRIVATE_KEY = new Uint8Array([
-  162, 175, 150, 113, 171, 222, 139, 119, 254, 129, 206, 209, 49, 209, 178, 90, 209, 233, 45, 168, 121, 177, 19, 42,
-  183, 61, 31, 79, 214, 161, 46, 204, 105, 231, 157, 104, 168, 87, 28, 186, 118, 167, 133, 202, 34, 217, 201, 16, 191,
-  21, 66, 70, 93, 159, 201, 248, 3, 79, 85, 144, 252, 117, 64, 198,
-])
+const PRIVATE_KEY = process.env.PRIVATE_KEY ? Uint8Array.from(Buffer.from(process.env.PRIVATE_KEY, 'base64')) : new Uint8Array();
 const RPC_ENDPOINT = "https://api.testnet.sonic.game"
 
 async function deployToken() {
