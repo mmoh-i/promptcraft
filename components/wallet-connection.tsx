@@ -35,13 +35,13 @@ export function WalletConnection() {
     try {
       setConnecting(true)
 
-      // Check if Phantom wallet is installed
-      const provider = window.solana
+      // Check for wallet providers
+      const provider = window.solana || window.solflare || window.backpack
 
       if (!provider) {
         toast({
           title: "Wallet not found",
-          description: "Please install Phantom wallet extension",
+          description: "Please install a supported wallet extension (Phantom, Solflare, or Backpack)",
           variant: "destructive",
         })
         return
